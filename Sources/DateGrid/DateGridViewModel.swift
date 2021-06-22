@@ -9,14 +9,14 @@ import SwiftUI
 
 class DateGridViewModel: ObservableObject {
     //FIXME: change var names "mode"
-    init(interval: DateInterval, mode: Binding<CalendarMode>) {
+    init(interval: DateInterval, mode: CalendarMode) {
         self.interval = interval
-        self._mode = mode
+        self.mode = mode
     }
     
     @Environment(\.calendar) var calendar
     let interval: DateInterval
-    @Binding var mode: CalendarMode
+    var mode: CalendarMode
     
     //total dates belong to month(inDate+ outDate) or week
     var monthsOrWeeks: [Date] {
