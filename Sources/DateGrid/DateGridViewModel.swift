@@ -9,9 +9,9 @@ import SwiftUI
 
 class DateGridViewModel: ObservableObject {
     //FIXME: change var names "mode"
-    init(interval: DateInterval, mode: CalendarMode) {
+    init(interval: DateInterval, mode: Binding<CalendarMode>) {
         self.interval = interval
-        self.mode = mode
+        self._mode = mode
     }
     
     @Environment(\.calendar) var calendar
