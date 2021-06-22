@@ -76,7 +76,6 @@ struct MonthsOrWeeks<DateView>: View where DateView: View {
                             
                         } else {
                             content(dateGridDate)
-                                .hidden()
                         }
                     }
                 }
