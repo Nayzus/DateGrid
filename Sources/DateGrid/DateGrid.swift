@@ -75,7 +75,7 @@ struct MonthsOrWeeks<DateView>: View where DateView: View {
                                 .id(date)
                             
                         } else {
-                            switch mode {
+                            switch viewModel.mode {
                                 case .month(estimateHeight: _):
                                    content(dateGridDate).hidden()
                                 case .week(estimateHeight: _):
