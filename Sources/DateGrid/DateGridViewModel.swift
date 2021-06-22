@@ -16,7 +16,7 @@ class DateGridViewModel: ObservableObject {
     
     @Environment(\.calendar) var calendar
     let interval: DateInterval
-    var mode: CalendarMode
+    @Binding var mode: CalendarMode
     
     //total dates belong to month(inDate+ outDate) or week
     var monthsOrWeeks: [Date] {
