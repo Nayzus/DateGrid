@@ -65,7 +65,7 @@ struct MonthsOrWeeks<DateView>: View where DateView: View {
             
             VStack {
                 
-                LazyVGrid(columns: Array(repeating: GridItem(.flexible()), count: numberOfDaysInAWeek), spacing: 0) {
+                VGrid(columns: Array(repeating: GridItem(.flexible()), count: numberOfDaysInAWeek), spacing: 0) {
                     
                     ForEach(viewModel.days(for: monthOrWeek), id: \.self) { date in
                         
